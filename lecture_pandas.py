@@ -1,4 +1,4 @@
-#必要なライブラリをインポート
+#pandasをインポート
 import pandas as pd
 
 #5行2列のデータフレームを作成してdfに代入。列名は出身地と性別。
@@ -28,3 +28,9 @@ df2=pd.DataFrame({"出身地":["竹田市","国東市"],"性別":["男性","女�
 
 #dfとdf2を結合してdf_concatに代入。
 df_concat=pd.concat([df,df2])
+
+#新しいデータフレームを作成してdf3に代入。
+df3=pd.DataFrame({"出身地":["中津市","竹田市"],"血液型":["A","O"]})
+
+#df_concatとdf3で出身地が同じものを結合しdf_mergeに代入する。
+df_merge=pd.merge(df_concat,df3,on="出身地")
