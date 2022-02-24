@@ -41,6 +41,7 @@ df_concat["出身地"].unique()
 df_concat["出身地"].value_counts()
 
 #df_concatを出身地別に平均年齢、性別ごとの人数を集計
+places=df_concat["出身地"].unique()
 place_list=[]
 age_list=[]
 male_list=[]
