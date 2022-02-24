@@ -50,9 +50,9 @@ for place in places:
     choice=df_concat[df_concat["出身地"]==place]
     age=choice["年齢"].mean()
     male=choice[choice["性別"]=="男性"]["性別"].count()
-    male_list.append(male)
     female=choice[choice["性別"]=="女性"]["性別"].count()
-    female_list.append(female)
     place_list.append(place)
     age_list.append(age)
+    male_list.append(male)
+    female_list.append(female)
     df_new=pd.DataFrame({"出身地":place_list,"平均年齢":age_list,"男性の数":male_list,"女性の数":female_list})
